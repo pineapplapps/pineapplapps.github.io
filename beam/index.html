@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description" content="">
+
+
+<link rel="shortcut icon" href="resources/logo.png"></link>
+<link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#FFFFF">
+   <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-status-title" content="Beam_Caculator">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" sizes="60x60" href="/resources/logo.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/resources/logo.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/resources/logo.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/resources/logo.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="/resources/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resources/logo.png">
+
+
+
+
+
+
+
+
+    <title>Beam Calulator</title>
+    <!-- Favicons-->
+    <link rel="apple-touch-icon-precomposed" href="images/favicon/apple-touch-icon-152x152.png">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="images/favicon/mstile-144x144.png">
+    <link rel="icon" href="resources/logo.png" sizes="32x32">
+    <!--  Android 5 Chrome Color-->
+    
+    <!-- CSS-->
+    <link href="resources/css/prism.css" rel="stylesheet">
+    <link href="resources/css/ghpages-materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <link href="resources/icon2.css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="resources/icon.css?family=Material+Icons" rel="stylesheet">
+
+<link href="style.css" rel="stylesheet">
+  
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
+</script>
+
+
+
+
+
+
+  </head>
+
+
+
+
+
+
+  <body>
+    <header>
+      <div class="container"><a href="#" data-target="nav-mobile" class="top-nav sidenav-trigger waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a></div>
+      <ul id="nav-mobile" class="sidenav sidenav-fixed">
+        <li class="logo1"><a id="logo-container" href="index.html" class="brand-logo"><img src='./resources/logo.png' style='margin-top:2%; width:100px;'/></a></li>
+     
+  
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Simple Beam</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+ <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal"> - Concentrated Load</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href='javascript:void(0)' onclick='setlint(1,1); sb_cl_bending_stress(); '> > Bending Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(1,2); sb_cl_shearing_stress();'> > Shearing Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(1,3); sb_cl_spacing();'> > Spacing of Bolts</a></li>
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+                  </li>
+                        <li>
+ <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal"> - Uniformly Distributed Load</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li><a href='javascript:void(0)' onclick='setlint(2,1)'> > Bending Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(2,2)'> > Shearing Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(2,3)'> > Spacing of Bolts</a></li>
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+                  </li>
+
+               
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+        </li>
+
+        <li class="no-padding">
+          <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal">Cantilever Beam</a>
+              <div class="collapsible-body">
+                <ul>
+                  <li>
+ <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal"> - Concentrated Load</a>
+              <div class="collapsible-body">
+                <ul>
+                   <li><a href='javascript:void(0)' onclick='setlint(3,1)'> > Bending Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(3,2)'> > Shearing Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(3,3)'> > Spacing of Bolts</a></li>
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+                  </li>
+                        <li>
+ <ul class="collapsible collapsible-accordion">
+            
+            <li class="bold"><a class="collapsible-header waves-effect waves-teal"> - Uniformly Distributed Load</a>
+              <div class="collapsible-body">
+                <ul>
+                   <li><a href='javascript:void(0)' onclick='setlint(3,1)'> > Bending Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(3,2)'> > Shearing Stress</a></li>
+                  <li><a href='javascript:void(0)' onclick='setlint(3,3)'> > Spacing of Bolts</a></li>
+                 
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+                  </li>
+
+               
+                 
+                </ul>
+              </div>
+            </li>
+      
+          </ul>
+        </li>
+       
+
+
+
+
+      </ul>
+  
+    
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<main id='main_content'>
+
+
+    </main>   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     <footer class="page-footer docs-footer">
+      <div class="container">
+        <div class="row" style="margin-bottom: 0;">
+       <center style='color:rgba(0,0,0,0.3)'>&copy; copyright _________ 2020</center>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="resources/bin/jquery-3.2.1.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="resources/bin/jquery-3.2.1.min.js"><\/script>'); }
+    </script>
+
+    <script src="resources/bin/materialize.js"></script>
+    <script src="resources/docs/js/init.js"></script>
+    <!-- Twitter Button -->
+   
+
+
+    <script>
+      $('#download-source, #download-sass').on('click', function () {
+        $('#download').slideUp(
+          { duration: 500,
+            queue: false,
+            complete: function()
+              { $('#download-thanks').slideDown({ duration: 300 }); }
+          });
+      });
+    </script>
+
+
+
+
+
+
+<script  src='main_app.js'></script>
+<script  src='./simple_beam/concentrated/bending_stress.js'></script>
+<script  src='./simple_beam/concentrated/shearing_stress.js'></script>
+<script  src='./simple_beam/concentrated/spacing_bolts.js'></script>
+
+
+
+    <script type="text/javascript">
+$(document).ready(function(){
+  main_app();
+ 
+});
+    </script>
+  </body>
+</html>

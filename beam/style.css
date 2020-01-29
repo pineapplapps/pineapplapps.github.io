@@ -1,0 +1,44 @@
+a.sidenav-trigger.top-nav{
+	top:10px;
+	    color: rgba(0,0,0,0.87);
+    font-size: 36px;
+}
+
+/* main_app.js */
+
+#maincont{
+	padding:1% 1% 1% 1%;
+}
+
+.pageheader{
+	padding:0% 1% 1% 1%;;
+}
+
+
+
+.table-bordered{
+border:solid; 
+}
+
+.table-bordered td{
+border:solid 1px; 
+}
+
+@media(max-width:340px){
+.pageheader{
+	padding:0% 1% 1% 1%;;
+font-size: 15px;
+
+}
+
+}
+
+
+@media(max-width:246px){
+.pageheader{
+	padding:0% 1% 1% 1%;;
+font-size: 10px;
+
+}
+
+}
